@@ -1,0 +1,293 @@
+/* Basic sample */
+
+body {
+    overflow: hidden;
+    background-color: #fcfcfc;
+    margin: 0;
+    padding: 0;
+}
+
+.flipbook-viewport {
+    width: 100%;
+    height: 100%;
+}
+
+.flipbook-viewport .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 922px;
+    height: 600px;
+    margin: auto;
+    padding: 0;
+}
+
+.flipbook-viewport .flipbook {
+    width: 922px;
+    height: 600px;
+    left: -461px;
+    top: -300px;
+}
+
+.flipbook-viewport .page {
+    width: 461px;
+    height: 600px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.flipbook .page {
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.flipbook-viewport .page img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0;
+}
+
+.flipbook-viewport .shadow {
+    -webkit-transition: -webkit-box-shadow 0.5s;
+    -moz-transition: -moz-box-shadow 0.5s;
+    -o-transition: -webkit-box-shadow 0.5s;
+    -ms-transition: -ms-box-shadow 0.5s;
+
+    -webkit-box-shadow: 0 0 20px #ccc;
+    -moz-box-shadow: 0 0 20px #ccc;
+    -o-box-shadow: 0 0 20px #ccc;
+    -ms-box-shadow: 0 0 20px #ccc;
+    box-shadow: 0 0 20px #ccc;
+}
+
+/* slick navigation */
+.flipbook-nav-wrap {
+    background: #e8e8e8;
+    width: 100%;
+}
+
+.flipbook-nav__page {
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+}
+
+.slick-next:before{
+    font-size: 18px;
+}
+.slick-prev:before{
+    font-size: 18px;
+}
+
+.flipbook-nav__page {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: 2px solid #fff;
+}
+
+.flipbook-nav__page.active {
+    border: 2px solid orange;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'FontAwesome';
+    color: #a3a3a3;
+}
+
+.slick-prev:before {
+    content: '\f053';
+}
+
+.slick-next:before {
+    content: '\f054';
+}
+
+/* slick navigation */
+
+.page-extra {
+    display: none;
+}
+
+/* extra bottom nav */
+.page-extra__bottom-nav {
+    position: absolute;
+    bottom: 24px;
+    width: 100%;
+    height: 15%;
+    /*background: red;*/
+    z-index: 999;
+    text-align: center;
+}
+/* extra bottom nav - WEB version */
+.page-extra__bottom-nav{
+    /* web version */
+    bottom: 0;
+    /*height: 18%;*/
+    height: 22%;
+}
+
+.page-extra__bottom-nav-item {
+    height: 100%;
+    /*width: 15%;*/
+    width: 19%;
+    margin: 0 -2px;
+    /*background-size: cover; !* 100% 100% *!*/
+    /*background-position: center;*/
+    background-image: none !important;
+    display: inline-block;
+    /*border: 12px solid #000;*/
+    /*border-left: 6px solid #000;*/
+    /*border-right: 6px solid #000*/
+    border: none;
+}
+
+.page-extra__bottom-nav-item:first-child {
+    /*border-left: 12px solid #000;*/
+}
+
+.page-extra__bottom-nav-item:last-child {
+    /*border-right: 12px solid #000;*/
+}
+
+.page-extra__bottom-nav-item.active {
+    /*border: 3px solid orange;*/
+}
+
+.page-extra__drop {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(255, 255, 255, 0.6);*/
+    background-color: transparent;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.page-extra__bottom-nav-item.active .page-extra__drop {
+    background: none;
+    transition: 0.3s;
+}
+
+.page-extra__drop-img {
+    display: block;
+    width: 15%;
+    padding: 17%;
+    margin: 0 auto;
+    opacity: 0.3;
+    text-align: center;
+}
+/* WEB version */
+.page-extra__drop-img{
+    padding: 0;
+    /*padding-top: 20%;*/
+    padding-top: 75px;
+}
+
+.page-extra__bottom-nav-item.active .page-extra__drop-img {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* extra bottom nav */
+
+/* extra slide block */
+.page-extra__slide-block {
+    position: absolute;
+    z-index: 1;
+}
+
+.page-extra__slide-block-control {
+    width: 8.5%;
+    height: 4%;
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+}
+
+/* extra slide block */
+
+.animated {
+    -webkit-transition: margin-left 0.5s;
+    -moz-transition: margin-left 0.5s;
+    -ms-transition: margin-left 0.5s;
+    -o-transition: margin-left 0.5s;
+    transition: margin-left 0.5s;
+}
+
+.page-extra.active {
+    display: block;
+}
+
+/*Next-prev buttons*/
+.nav-button{
+    position: absolute;
+    color: #a3a3a3;
+    top: 0;
+    width: 50px;
+    height: 100%;
+}
+
+.next-button {
+    right: -50px;
+}
+.previous-button {
+    left: -50px;
+}
+.next-button:hover{
+    cursor: pointer;
+}
+
+.previous-button:hover{
+    cursor: pointer;
+}
+
+.arrow{
+    position: absolute;
+    top: 45%;
+    font-size: 50px;
+}
+
+.arrow-right {
+    right: 0;
+}
+.arrow-left {
+    left: 0;
+}
+
+/*Next-prev buttons*/
+
+.flipbook-shadow{
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.5);
+}
+
+.flipbook-viewport .loader{
+    background-image:url(../loader.gif);
+    width:22px;
+    height:22px;
+    position:absolute;
+    top:50%;
+    left:50%;
+}
+
+@media (max-width: 400px) {
+    .arrow{
+        font-size: 35px;
+    }
+    .next-button{
+        right: -35px;
+    }
+    .previous-button{
+        left: -35px;
+    }
+}
